@@ -1,0 +1,50 @@
+.search {
+  display: flex;
+  margin-top: 20px;
+  padding: 10px 40px;
+}
+
+.input-search {
+  border-color: #c4c2c2;
+  border-radius: 7px;
+  border-style: solid;
+  background: #fff;
+  width: 25%;
+  height: 40px;
+  padding-left: 19px;
+}
+
+.btn-filtro {
+  margin-left: 10px;
+  width: 90px;
+  height: 40px;
+}
+
+.mat-elevation-z4 {
+  margin-bottom: 60px;
+}
+
+.full-width-table {
+  width: 100%;
+}
+
+.tagusername {
+  color: #69788c;
+}
+
+.tagdate {
+  color: #69788c;
+}
+
+.edit {
+  margin-left: 40%;
+  margin-right: 15px;
+}
+
+.edit > i {
+  color: black;
+}
+
+.delete > i {
+  color: black;
+}

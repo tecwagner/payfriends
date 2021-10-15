@@ -1,0 +1,26 @@
+.home .title {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+}
+
+.title > span {
+  font-size: 2rem;
+  margin-top: 9px;
+  margin-left: 6px;
+}
+
+.home .subtitle {
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.subtitle > img {
+  display: flex;
+  height: 20px;
+  margin-left: 6px;
+  // margin-top: 5px;
+}

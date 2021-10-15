@@ -1,0 +1,72 @@
+<div class="container-card">
+  <mat-card class="card">
+    <mat-card-title class="card-title">Adicionar Pagamentos</mat-card-title>
+    <form class="form-create">
+      <table cellspacing="30">
+        <tr>
+          <td>
+            <mat-form-field class="input-field">
+              <input
+                matInput
+                type="text"
+                placeholder="Usuário*"
+                [(ngModel)]="pay.username"
+                name="username"
+              />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field>
+              <input
+                matInput
+                [matDatepicker]="dp3"
+                type="datetime"
+                placeholder="Data*"
+                [(ngModel)]="pay.date"
+                name="date"
+              />
+              <mat-datepicker-toggle
+                matSuffix
+                [for]="dp3"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <input
+                matInput
+                type="text"
+                placeholder="Valor*"
+                [(ngModel)]="pay.value"
+                name="value"
+                mask="separator.2"
+                thousandSeparator=","
+              />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field>
+              <input
+                matInput
+                type="text"
+                placeholder="Título*"
+                [(ngModel)]="pay.title"
+                name="title"
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <div class="button-card">
+      <button mat-raised-button (click)="cancelPayment()">Cancelar</button>
+
+      <button mat-raised-button color="primary" (click)="createPayment()">
+        Salvar
+      </button>
+    </div>
+  </mat-card>
+</div>

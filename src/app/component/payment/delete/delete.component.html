@@ -1,0 +1,68 @@
+<div class="container-card">
+  <mat-card class="card">
+    <mat-card-title class="card-title">Excluir Pagamento</mat-card-title>
+    <form class="form-delete">
+      <table cellspacing="30">
+        <tr>
+          <td>
+            <mat-form-field class="input-field">
+              <input
+                matInput
+                type="text"
+                placeholder="Usuário"
+                [(ngModel)]="pay.username"
+                name="username"
+                disabled
+              />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field>
+              <input
+                matInput
+                type="datetime"
+                placeholder="Data"
+                [(ngModel)]="pay.date"
+                name="date"
+                disabled
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <input
+                matInput
+                type="number"
+                placeholder="Valor"
+                [(ngModel)]="pay.value"
+                name="value"
+                disabled
+              />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field>
+              <input
+                matInput
+                type="text"
+                placeholder="Título"
+                [(ngModel)]="pay.title"
+                name="title"
+                disabled
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <div class="button-card">
+      <button mat-raised-button (click)="cancelPayment()">Cancelar</button>
+
+      <button mat-raised-button color="primary" (click)="deletePayment()">
+        Excluir
+      </button>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,28 @@
+.container-card {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  position: relative;
+}
+
+.card {
+  width: 40%;
+  justify-content: center;
+}
+
+.form-delete {
+  padding: 22px 29px;
+  display: flex;
+  justify-content: center;
+}
+
+.button-card {
+  display: flex;
+  margin-right: 10px;
+  justify-content: end;
+}
+
+.button-card button {
+  width: 90px;
+  margin-right: 10px;
+}

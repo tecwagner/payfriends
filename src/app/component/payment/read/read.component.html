@@ -1,0 +1,84 @@
+<div class="mat-elevation-z4">
+  <form
+    class="search"
+    [formGroup]="formGroupSearch"
+    (ngSubmit)="this.formGroupSearch.value && readItens()"
+  >
+    <input
+      class="input-search"
+      matInput
+      placeholder="Pesquisar por usuário"
+      formControlName="name"
+      autocomplete="off"
+    />
+    <button mat-raised-button class="btn-filtro">
+      <img src="assets/Shape.png" />
+      Filtro
+    </button>
+  </form>
+  <table mat-table [dataSource]="page.content" class="full-width-table">
+    <!-- User Column -->
+    <ng-container matColumnDef="username">
+      <th mat-header-cell *matHeaderCellDef>Usuário</th>
+      <td mat-cell *matCellDef="let row">
+        {{ row.name }}
+        <br />
+        <span class="tagusername">@{{ row.username }}</span>
+      </td>
+    </ng-container>
+
+    <!-- Title Column -->
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef>Título</th>
+      <td mat-cell *matCellDef="let row">{{ row.title }}</td>
+    </ng-container>
+
+    <!-- Data Column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef>Data</th>
+      <td mat-cell *matCellDef="let row">
+        {{ row.date | date }}
+        <br />
+        <span class="tagdate">{{ row.date | date: "h:mma" }}</span>
+      </td>
+    </ng-container>
+
+    <!-- Valor Column -->
+    <ng-container matColumnDef="value">
+      <th mat-header-cell *matHeaderCellDef>Valor</th>
+      <td mat-cell *matCellDef="let row">{{ row.value | currency: "BRL" }}</td>
+    </ng-container>
+
+    <!-- Status Column -->
+    <ng-container matColumnDef="isPayed">
+      <th mat-header-cell *matHeaderCellDef>Pago</th>
+      <td mat-cell *matCellDef="let row">
+        <input type="checkbox" [(ngModel)]="row.isPayed" />
+      </td>
+    </ng-container>
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let row">
+        <a routerLink="/extract/update/{{ row.id }}" class="edit">
+          <i class="material-icons"> edit </i>
+        </a>
+        <a routerLink="/extract/delete/{{ row.id }}" class="delete">
+          <i class="material-icons delete"> delete </i>
+        </a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <mat-paginator
+    [length]="page.totalElements"
+    [pageSize]="5"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    (page)="pageEvent = $event; readItens()"
+  >
+  </mat-paginator>
+</div>

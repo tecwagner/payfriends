@@ -1,0 +1,65 @@
+<div class="container-card">
+  <mat-card class="card">
+    <mat-card-title class="card-title">Editar Pagamentos</mat-card-title>
+    <form class="form-edit">
+      <table cellspacing="30">
+        <tr>
+          <td>
+            <mat-form-field class="input-field">
+              <input
+                matInput
+                type="text"
+                placeholder="Usuário"
+                [(ngModel)]="pay.username"
+                name="username"
+                disabled
+              />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Data"
+                [(ngModel)]="pay.date"
+                name="date"
+                disabled
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <input
+                matInput
+                type="number"
+                placeholder="Valor"
+                [(ngModel)]="pay.value"
+                name="value"
+              />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field>
+              <input
+                matInput
+                type="text"
+                placeholder="Título"
+                [(ngModel)]="pay.title"
+                name="title"
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <div class="button-card">
+      <button mat-raised-button (click)="cancelPayment()">Cancelar</button>
+
+      <button mat-raised-button color="primary" (click)="updatePayment()">
+        Atualizar
+      </button>
+    </div>
+  </mat-card>
+</div>
