@@ -30,6 +30,7 @@ import { MatTableModule } from "@angular/material/table";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatSortModule } from "@angular/material/sort";
 import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatCheckboxModule } from "@angular/material/checkbox";
 
 import localePt from "@angular/common/locales/pt";
 import { registerLocaleData } from "@angular/common";
@@ -75,6 +76,7 @@ registerLocaleData(localePt);
     MatDatepickerModule,
     NgxMaskModule.forRoot({ dropSpecialCharacters: false }),
     MatNativeDateModule,
+    MatCheckboxModule,
   ],
   providers: [
     {

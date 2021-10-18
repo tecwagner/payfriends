@@ -15,6 +15,8 @@ export class CreateComponent implements OnInit {
     date: "",
     value: null,
     title: "",
+    isPayed: false,
+    image: "",
   };
 
   constructor(

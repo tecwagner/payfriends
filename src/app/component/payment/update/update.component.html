@@ -9,6 +9,18 @@
               <input
                 matInput
                 type="text"
+                placeholder="Nome"
+                [(ngModel)]="pay.name"
+                name="name"
+                disabled
+              />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="input-field">
+              <input
+                matInput
+                type="text"
                 placeholder="Usuário"
                 [(ngModel)]="pay.username"
                 name="username"
@@ -16,6 +28,8 @@
               />
             </mat-form-field>
           </td>
+        </tr>
+        <tr>
           <td>
             <mat-form-field>
               <input
@@ -27,8 +41,6 @@
               />
             </mat-form-field>
           </td>
-        </tr>
-        <tr>
           <td>
             <mat-form-field>
               <input
@@ -37,9 +49,13 @@
                 placeholder="Valor"
                 [(ngModel)]="pay.value"
                 name="value"
+                mask="separator.2"
+                thousandSeparator=","
               />
             </mat-form-field>
           </td>
+        </tr>
+        <tr>
           <td>
             <mat-form-field>
               <input
@@ -48,6 +64,27 @@
                 placeholder="Título"
                 [(ngModel)]="pay.title"
                 name="title"
+              />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-checkbox
+              color="primary"
+              name="isPayed"
+              [(ngModel)]="pay.isPayed"
+              >Pago</mat-checkbox
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <input
+                matInput
+                type="text"
+                placeholder="Url Imagem*"
+                [(ngModel)]="pay.image"
+                name="image"
               />
             </mat-form-field>
           </td>
