@@ -48,3 +48,20 @@
 .delete > i {
   color: black;
 }
+
+tr:nth-child(even) {
+  background: #f5f8fa;
+}
+tr:nth-child(odd) {
+  background: #fff;
+}
+
+.mat-row .mat-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+}
+
+.mat-header-cell {
+  border-bottom: 2px solid;
+  border-color: #cfdce5;
+}
