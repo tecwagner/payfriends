@@ -8,8 +8,9 @@
             <mat-form-field class="input-field">
               <input
                 matInput
+                required
                 type="text"
-                placeholder="Nome*"
+                placeholder="Nome"
                 [(ngModel)]="pay.name"
                 name="name"
               />
@@ -19,8 +20,9 @@
             <mat-form-field class="input-field">
               <input
                 matInput
+                required
                 type="text"
-                placeholder="Usuário*"
+                placeholder="Usuário "
                 [(ngModel)]="pay.username"
                 name="username"
               />
@@ -32,9 +34,10 @@
             <mat-form-field>
               <input
                 matInput
+                required
                 [matDatepicker]="dp3"
                 type="datetime"
-                placeholder="Data*"
+                placeholder="Data"
                 [(ngModel)]="pay.date"
                 name="date"
               />
@@ -49,12 +52,14 @@
             <mat-form-field>
               <input
                 matInput
+                required
                 type="text"
-                placeholder="Valor*"
+                placeholder="Valor"
                 [(ngModel)]="pay.value"
                 name="value"
+                [allowNegativeNumbers]="true"
                 mask="separator.2"
-                thousandSeparator=","
+                thousandSeparator="."
               />
             </mat-form-field>
           </td>
@@ -64,8 +69,9 @@
             <mat-form-field>
               <input
                 matInput
+                required
                 type="text"
-                placeholder="Título*"
+                placeholder="Título"
                 [(ngModel)]="pay.title"
                 name="title"
               />
@@ -86,7 +92,7 @@
               <input
                 matInput
                 type="text"
-                placeholder="Url Imagem*"
+                placeholder="Url Imagem"
                 [(ngModel)]="pay.image"
                 name="image"
               />

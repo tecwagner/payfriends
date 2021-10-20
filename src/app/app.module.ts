@@ -27,7 +27,10 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { ReadComponent } from "./component/payment/read/read.component";
 import { MatTableModule } from "@angular/material/table";
-import { MatPaginatorModule } from "@angular/material/paginator";
+import {
+  MatPaginatorIntl,
+  MatPaginatorModule,
+} from "@angular/material/paginator";
 import { MatSortModule } from "@angular/material/sort";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatCheckboxModule } from "@angular/material/checkbox";
@@ -82,6 +85,9 @@ registerLocaleData(localePt);
     {
       provide: LOCALE_ID,
       useValue: "pt-BR",
+    },
+    {
+      provide: MatPaginatorIntl,
       useClass: MatPaginatorIntlPtBr,
     },
   ],
